@@ -13,22 +13,23 @@ public class Main {
         //Caso de uso: guardar libro
         MySQLBookRepository bookRepository = new MySQLBookRepository();
 
-         //   Libro newBook = new Libro ("C234", "Clean Architecture", "Uncle Bob" );
+        //   Libro newBook = new Libro ("C234", "Clean Architecture", "Uncle Bob" );
         //    bookRepository.save(newBook);
 
         List<Libro> list = bookRepository.findAll();
-        for (Libro book: list){
+        for (Libro book : list) {
             System.out.println(book);
         }
 
-       Optional<Libro> optionalBook = bookRepository.findByIsbn("C234");
+        Optional<Libro> optionalBook = bookRepository.findByIsbn("C234");
 
-       if (optionalBook.isPresent()) {
-          Libro book = optionalBook.get();
-           System.out.println(book);
-       }
-       if (optionalBook.isEmpty()){
-           System.out.println("El libro no se encuentra");}
+        if (optionalBook.isPresent()) {
+            Libro book = optionalBook.get();
+            System.out.println(book);
+        }
+        if (optionalBook.isEmpty()) {
+            System.out.println("El libro no se encuentra");
+        }
 
     }
 

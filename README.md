@@ -29,7 +29,7 @@ Tech Book Manger
  ```javac -d bin src/com/alexmonzon/*.java```
 - Ejecuta la aplicación.
 
-```java -cp bin com.alexmonzon```
+```java -cp bin com.example```
 
 ## Uso
 - Al iniciar la aplicación, selecciona una opción del menú para gestionar tu colección de libros.

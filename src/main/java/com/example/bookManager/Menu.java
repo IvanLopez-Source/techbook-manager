@@ -1,4 +1,4 @@
-package com.alexmonzon;
+package com.example.bookManager;
 
 import java.util.ArrayList;
 import java.util.List;

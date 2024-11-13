@@ -1,13 +1,18 @@
-package com.example.bookManager;
+package com.example.bookManager.persitence;
+
+import com.example.bookManager.logic.BookRepository;
+import com.example.bookManager.config.MySqlConnection;
+import com.example.bookManager.logic.Libro;
 
 import java.sql.*;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Optional;
 
-public class MySQLBookRepository {
+public class MySQLBookRepository implements BookRepository {
 
     // CRUD
+    @Override
     public void save(Libro book) {
         String sql = "INSERT INTO books (isbn, title, author) VALUES ('%s', '%s', '%s')"
                 .formatted(book.getIsbn(), book.getTitle(), book.getAuthor());
@@ -26,6 +31,7 @@ public class MySQLBookRepository {
         }
 
     }
+    @Override
     public List<Libro> findAll(){
         String sql = "SELECT * FROM books";
         List<Libro> booksList = new ArrayList<>();
@@ -50,6 +56,7 @@ public class MySQLBookRepository {
         return booksList;
     }
 
+    @Override
     public void deleteByIsbn(String isbn) {
         String sql = "DELETE FROM books WHERE isbn='%s'".formatted(isbn);
         try {
@@ -63,6 +70,7 @@ public class MySQLBookRepository {
         }
     }
 
+  @Override
   public Optional<Libro> findByIsbn(String isbn) {
         String sql = "SELECT * FROM books WHERE isbn= '%s'".formatted(isbn);
         try {

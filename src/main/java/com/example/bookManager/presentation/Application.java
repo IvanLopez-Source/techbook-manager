@@ -1,5 +1,9 @@
-package com.example.bookManager;
+package com.example.bookManager.presentation;
 
+import com.example.bookManager.logic.BookManager;
+import com.example.bookManager.logic.Libro;
+
+import java.util.List;
 import java.util.Scanner;
 
 public class Application {
@@ -73,7 +77,7 @@ public class Application {
         System.out.println("Introduce autor. (El campo no puede estar vacío.)");
         String autor = sc.nextLine();
         try {
-            this.bookManager.createBook(isbn, titulo, autor, this);
+            this.bookManager.createBook(isbn, titulo, autor);
             System.out.println("El libro añadido con éxito");
         } catch (Exception e) {
             System.out.println(e.getMessage());
@@ -96,12 +100,9 @@ public class Application {
     }
 
     private void printBookList() {
-        try {
-            this.bookManager.emptyBookList(bookManager.bookList);
-            System.out.println("Lista de libros: ");
-            System.out.println(bookManager.bookList);
-        } catch (Exception e) {
-            System.out.println(e.getMessage());
+        List<Libro> bookList = bookManager.getAllBook();
+        for (Libro book : bookList) {
+            System.out.println(book.toString());
         }
     }
 

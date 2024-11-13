@@ -1,4 +1,4 @@
-package com.example.bookManager;
+package com.example.bookManager.config;
 
 import java.sql.Connection;
 import java.sql.DriverManager;

@@ -1,4 +1,4 @@
-package com.example.bookManager;
+package com.example.bookManager.logic;
 
 public class Libro {
     private String isbn;

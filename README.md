@@ -99,3 +99,13 @@ Agradecimientos especiales a los siguientes colaboradores por sus contribuciones
 
 - [LayGomez](https://github.com/LayGomez)
 - [Evymari](https://github.com/evymari)
+
+## 🔗 Recursos del Proyecto
+
+### 📋 Jira
+Puedes acceder al tablero de Jira para ver el progreso del proyecto y el estado de las tareas en el siguiente enlace:
+- [Jira Board - Proyecto ILAE](https://doingtechthings.atlassian.net/jira/software/projects/ILAE/boards/2)
+
+### 📝 Diagramas en Draw.io
+Para ver y editar los diagramas del proyecto, utiliza el siguiente enlace a Draw.io:
+- [Draw.io - Diagramas del Proyecto](AQUÍ_VA_EL_ENLACE_DE_DRAWIO)

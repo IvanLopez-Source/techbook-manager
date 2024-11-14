@@ -1,19 +1,30 @@
 package com.example.bookManager.presentation;
 
 import com.example.bookManager.logic.BookManager;
+import com.example.bookManager.logic.BookRepository;
 import com.example.bookManager.logic.Libro;
+import com.example.bookManager.persitence.InMemoryBookRepository;
+import com.example.bookManager.persitence.MySQLBookRepository;
 
 import java.util.List;
 import java.util.Scanner;
 
-public class Application {
-    private final BookManager bookManager = new BookManager();
+public class ConsoleView {
+    private final BookManager bookManager;
+    private final BookRepository inMemoryRepository;
+    private final BookRepository mySqlRepository;
+
     private Scanner sc = new Scanner(System.in);
 
-    Libro libro1 = new Libro("A123", "Java", "java");
+    public ConsoleView() {
+        this.bookManager = new BookManager(new MySQLBookRepository());
 
+        this.inMemoryRepository = new InMemoryBookRepository();
+        this.mySqlRepository = new MySQLBookRepository();
+    }
 
     public void imprimir() {
+
 
         int option;
         Scanner sc = new Scanner(System.in);
@@ -48,6 +59,7 @@ public class Application {
                     break;
                 case 4:
                     System.out.println("Option 4: Cambiar Repositorio");
+                    optionSelector(option);
                     break;
                 case 5:
                     System.out.println("Option 5: Salir");
@@ -63,6 +75,27 @@ public class Application {
         if (option == 1) this.printAddBookMenu();
         if (option == 2) this.printBookList();
         if (option == 3) this.printDeleteBook();
+        if (option == 4) this.printChangeRepository();
+
+    }
+
+    private  void  printChangeRepository() {
+        System.out.println("Selecciona el tipo de repositorio");
+        System.out.println("1. Memoria");
+        System.out.println("2. Base de datos MySQL");
+        System.out.println("Seleccione una opción");
+
+        String optionRepository = sc.nextLine();
+
+        if (optionRepository.equals("1")){
+            bookManager.changeRepository(inMemoryRepository);
+            System.out.println("Se cambió al repositorio de memoria");
+        }
+        if (optionRepository.equals("2")) {
+            bookManager.changeRepository(mySqlRepository);
+            System.out.println("Se cambió al repositorio Base de datos");
+        }
+
     }
 
     private void printAddBookMenu() {

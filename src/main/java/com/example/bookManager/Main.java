@@ -1,12 +1,12 @@
 package com.example.bookManager;
 
 
-import com.example.bookManager.presentation.Application;
+import com.example.bookManager.presentation.ConsoleView;
 
 public class Main {
 
     public static void main(String[] args) {
-        Application menu = new Application();
+        ConsoleView menu = new ConsoleView();
         menu.imprimir();
 
 //        Caso de uso: guardar libro

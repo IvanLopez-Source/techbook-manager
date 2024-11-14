@@ -17,10 +17,7 @@ public class MySQLBookRepository implements BookRepository {
         String sql = "INSERT INTO books (isbn, title, author) VALUES ('%s', '%s', '%s')"
                 .formatted(book.getIsbn(), book.getTitle(), book.getAuthor());
 
-        System.out.println(sql);
-        //try with resources
-
-        try{
+        try {
             Connection connection = MySqlConnection.getConnection();
             Statement statement = connection.createStatement();
 
@@ -31,8 +28,9 @@ public class MySQLBookRepository implements BookRepository {
         }
 
     }
+
     @Override
-    public List<Libro> findAll(){
+    public List<Libro> findAll() {
         String sql = "SELECT * FROM books";
         List<Libro> booksList = new ArrayList<>();
         try {
@@ -41,7 +39,7 @@ public class MySQLBookRepository implements BookRepository {
             ResultSet res = statement.executeQuery(sql);
 
 
-            while ( res.next()){
+            while (res.next()) {
                 String isbn = res.getString("isbn");
                 String title = res.getString("title");
                 String author = res.getString("author");
@@ -50,7 +48,7 @@ public class MySQLBookRepository implements BookRepository {
                 booksList.add(book);
             }
 
-        }catch (SQLException ex){
+        } catch (SQLException ex) {
             System.out.println(ex.getMessage());
         }
         return booksList;
@@ -70,8 +68,8 @@ public class MySQLBookRepository implements BookRepository {
         }
     }
 
-  @Override
-  public Optional<Libro> findByIsbn(String isbn) {
+    @Override
+    public Optional<Libro> findByIsbn(String isbn) {
         String sql = "SELECT * FROM books WHERE isbn= '%s'".formatted(isbn);
         try {
             Connection connection = MySqlConnection.getConnection();

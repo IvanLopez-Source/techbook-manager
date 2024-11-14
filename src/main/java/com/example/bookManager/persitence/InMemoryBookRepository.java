@@ -1,7 +1,9 @@
 package com.example.bookManager.persitence;
 
+import com.example.bookManager.config.MySqlConnection;
 import com.example.bookManager.logic.BookRepository;
 import com.example.bookManager.logic.Libro;
+
 
 import java.util.ArrayList;
 import java.util.List;
@@ -12,6 +14,12 @@ public class InMemoryBookRepository implements BookRepository {
 
     @Override
     public void save(Libro book) {
+        for (Libro libro : booksDB) {
+            if (libro.getIsbn().equals(book.getIsbn())) {
+                throw new IllegalArgumentException("Ya existe un libro con ese ISBN. No se puede añadir el libro.");
+            }
+        }
+
         booksDB.add(book);
     }
 

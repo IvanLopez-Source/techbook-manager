@@ -6,9 +6,13 @@ import java.util.List;
 import java.util.Optional;
 
 public class BookManager {
-    private BookRepository bookRepository = new MySQLBookRepository();
+    private BookRepository bookRepository;
 
+    // inversion de dependencias (SOLID) Dependency Inversion Principle
 
+    public BookManager(BookRepository bookRepository) {
+        this.bookRepository = bookRepository;
+    }
 
     public void createBook(String isbn, String titulo, String autor) {
         Optional<Libro> optionalLibro = bookRepository.findByIsbn(isbn);
@@ -32,7 +36,6 @@ public class BookManager {
         Libro libro = new Libro(isbn, titulo, autor);
         bookRepository.save(libro);
 
-
     }
 
     public void deleteBook(String isbn) {
@@ -41,5 +44,10 @@ public class BookManager {
 
     public List<Libro> getAllBook() {
         return bookRepository.findAll();
+    }
+
+    public void changeRepository(BookRepository newRespository){
+        this.bookRepository= newRespository;
+
     }
 }

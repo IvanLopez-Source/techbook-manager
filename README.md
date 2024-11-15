@@ -144,4 +144,8 @@ Puedes acceder al tablero de Jira para ver el progreso del proyecto y el estado 
 
 ### 📝 Diagramas en Draw.io
 Para ver y editar los diagramas del proyecto, utiliza el siguiente enlace a Draw.io:
+<<<<<<< HEAD
 - [Draw.io - Diagramas del Proyecto](https://drive.google.com/file/d/1uBBDb_S9NP8q_nvbcwhBTsAeaM8q8FOD/view?usp=sharing )
+=======
+- [Draw.io - Diagramas del Proyecto](https://drive.google.com/file/d/1uBBDb_S9NP8q_nvbcwhBTsAeaM8q8FOD/view?usp=sharing)
+>>>>>>> 6987c39cc2d328bcffa62be7bacda99148932cac

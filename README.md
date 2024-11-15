@@ -97,7 +97,7 @@ MySQL Connector: mysql-connector-java (versión 8.0.33) para conectarse a bases 
 ## Aplicaciones usadas:
 IntelliJ IDEA: IDE para el desarrollo del código.
 MySQL Workbench: Gestión y visualización de la base de datos.
-PlantUML: Creación de diagramas UML.
+
 
 ## 📊 Diagrama de Clases UML
 A continuación se muestra un diagrama de clases básico para la aplicación:
@@ -138,6 +138,7 @@ Agradecimientos especiales a los siguientes colaboradores por sus contribuciones
 - [Evymari](https://github.com/evymari)
 - [IvanLopez](https://github.com/IvanLopez-Source)
 - [LayGomez](https://github.com/LayGomez)
+- [Alex]()
 
 ## 🔗 Recursos del Proyecto
 

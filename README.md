@@ -8,6 +8,16 @@ Tech Book Manger
 - **🔄Cambiar repositorio**: Opción para futuras implementaciones. 
 - **❌Salir de la aplicación**: Cierra el programa.📚 Tech Books Manager App
 
+## 📂 Estructura del Proyecto
+ La aplicación sigue una estructura de paquetes para organizar el código de acuerdo a sus responsabilidades:
+
+- config: Contiene archivos de configuración para la aplicación.
+- logic: Contiene la lógica de negocio para gestionar los libros.
+- persistence: Responsable de la persistencia de datos (guardado y recuperación).
+- presentation: Maneja la interfaz de usuario y la interacción con la consola.
+## Directorios de prueba:
+test/java/com.example.bookManager.logic: Incluye las clases de prueba como BookManagerTest y LibroTest para verificar la funcionalidad de la lógica de negocio.
+
 ## 📂Estructura del Código
 - **Clase `Imprimir`**: Contiene el menú principal y la lógica de manejo de la colección de libros. Gestiona la interacción con el usuario y las operaciones en la lista de libros. 
 - **Métodos clave**: 
@@ -79,10 +89,9 @@ Garantiza que se muestran todos los libros en la colección.
 Valida que la aplicación maneje correctamente una colección vacía.
 Ejecución de pruebas:
 Navega al directorio raíz del proyecto.
-Ejecuta las pruebas con:
-bash
-Copiar código
-mvn test
+
+```mvn test ```
+
 ## 📦 Dependencias y Aplicaciones Usadas
 Este proyecto utiliza las siguientes tecnologías:
 

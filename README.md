@@ -136,9 +136,9 @@ Agradecimientos especiales a los siguientes colaboradores por sus contribuciones
 
 
 - [Evymari](https://github.com/evymari)
-- [IvanLopez](https://github.com/IvanLopez-Source)
 - [LayGomez](https://github.com/LayGomez)
-- [Alex]()
+- [AlexMonzondev](https://github.com/AlexMonzdev)
+- [IvanLopez](https://github.com/IvanLopez-Source)
 
 ## 🔗 Recursos del Proyecto
 

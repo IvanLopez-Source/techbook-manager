@@ -101,7 +101,7 @@ public class ConsoleView {
     private void printAddBookMenu() {
 
         Scanner sc = new Scanner(System.in);
-        System.out.println(" Introdusca el isbn. (El campo no puede estar vacio)");
+        System.out.println(" Introduce el isbn. (El campo no puede estar vacio)");
         String isbn = sc.nextLine();
 
         System.out.println("introduce titulo. (El campo no puede estar vacío)");
@@ -111,7 +111,7 @@ public class ConsoleView {
         String autor = sc.nextLine();
         try {
             this.bookManager.createBook(isbn, titulo, autor);
-            System.out.println("El libro añadido con éxito");
+            System.out.println("El libro se ha añadido con éxito");
         } catch (Exception e) {
             System.out.println(e.getMessage());
         }

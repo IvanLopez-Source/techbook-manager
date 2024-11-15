@@ -14,15 +14,15 @@ public class MySQLBookRepository implements BookRepository {
     // CRUD
     @Override
     public void save(Libro book) {
-        String sql = "INSERT INTO books (isbn, title, author) VALUES ('%s', '%s', '%s')"
-                .formatted(book.getIsbn(), book.getTitle(), book.getAuthor());
+        String sql = "INSERT INTO books (isbn, title, author) VALUES (?, ?, ?)";
 
-        try {
-            Connection connection = MySqlConnection.getConnection();
-            Statement statement = connection.createStatement();
 
-            statement.executeUpdate(sql);
+        try(Connection connection = MySqlConnection.getConnection(); PreparedStatement statement = connection.prepareStatement(sql)){
+            statement.setString(1, book.getIsbn());
+            statement.setString(2, book.getTitle());
+            statement.setString(3, book.getAuthor());
 
+            statement.execute();
         } catch (SQLException ex) {
             System.out.println(ex.getMessage());
         }

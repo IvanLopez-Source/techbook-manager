@@ -52,7 +52,7 @@ Ingrese el título del libro: Programación en Java
 Ingrese el autor del libro: Alex Monzon
 Ingrese el ISBN (formato: A123): B456
 
-📚 Libro añadido exitosamente.
+## 📚 Libro añadido exitosamente.
 
 Opción: 2
 Lista de libros:
@@ -62,7 +62,7 @@ Opción: 3
 Ingrese el ISBN del libro a eliminar: B456
 🗑️ Libro eliminado exitosamente.
 
-🧪 Pruebas Utilizadas
+## 🧪 Pruebas Utilizadas
 Este proyecto utiliza JUnit 5 para pruebas unitarias. Algunas pruebas clave incluyen:
 
 Añadir un libro:
@@ -83,23 +83,26 @@ Ejecuta las pruebas con:
 bash
 Copiar código
 mvn test
-📦 Dependencias y Aplicaciones Usadas
+## 📦 Dependencias y Aplicaciones Usadas
 Este proyecto utiliza las siguientes tecnologías:
 
-Dependencias:
+## Dependencias:
 Java: Lenguaje principal de desarrollo.
 Maven: Gestión de dependencias y construcción del proyecto.
 JUnit 5: Framework para pruebas unitarias.
-Bibliotecas:
+
+## Bibliotecas:
 MySQL Connector: mysql-connector-java (versión 8.0.33) para conectarse a bases de datos MySQL.
-Aplicaciones usadas:
+
+## Aplicaciones usadas:
 IntelliJ IDEA: IDE para el desarrollo del código.
 MySQL Workbench: Gestión y visualización de la base de datos.
 PlantUML: Creación de diagramas UML.
-📊 Diagrama de Clases UML
+
+## 📊 Diagrama de Clases UML
 A continuación se muestra un diagrama de clases básico para la aplicación:
 
-plantuml
+
 Copiar código
 @startuml
 class Imprimir {
@@ -120,7 +123,7 @@ class Book {
   }
 
 Imprimir --> Book
-@enduml
+
 ![uml-bookmanager.png](uml-bookmanager.png)
 📌 Repositorio de Código
 El código de esta aplicación está disponible en este repositorio de GitHub. Aquí puedes explorar los archivos fuente y ver cómo se implementa cada funcionalidad descrita.
@@ -143,6 +146,7 @@ Puedes acceder al tablero de Jira para ver el progreso del proyecto y el estado 
 - [Jira Board - Proyecto ILAE](https://doingtechthings.atlassian.net/jira/software/projects/ILAE/boards/2)
 
 ### 📝 Diagramas en Draw.io
+
 Para ver y editar los diagramas del proyecto, utiliza el siguiente enlace a Draw.io:
 
 - [Draw.io - Diagramas del Proyecto](https://drive.google.com/file/d/1uBBDb_S9NP8q_nvbcwhBTsAeaM8q8FOD/view?usp=sharing )

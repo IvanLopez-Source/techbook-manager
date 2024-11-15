@@ -61,6 +61,41 @@ Lista de libros:
 Opción: 3
 Ingrese el ISBN del libro a eliminar: B456
 🗑️ Libro eliminado exitosamente.
+
+🧪 Pruebas Utilizadas
+Este proyecto utiliza JUnit 5 para pruebas unitarias. Algunas pruebas clave incluyen:
+
+Añadir un libro:
+
+Valida que un libro se agrega correctamente a la colección.
+Asegura que no se permiten duplicados en el ISBN.
+Eliminar un libro:
+
+Comprueba que un libro se elimina correctamente al proporcionar un ISBN válido.
+Verifica que no se afecten otros libros en la colección.
+Listar libros:
+
+Garantiza que se muestran todos los libros en la colección.
+Valida que la aplicación maneje correctamente una colección vacía.
+Ejecución de pruebas:
+Navega al directorio raíz del proyecto.
+Ejecuta las pruebas con:
+bash
+Copiar código
+mvn test
+📦 Dependencias y Aplicaciones Usadas
+Este proyecto utiliza las siguientes tecnologías:
+
+Dependencias:
+Java: Lenguaje principal de desarrollo.
+Maven: Gestión de dependencias y construcción del proyecto.
+JUnit 5: Framework para pruebas unitarias.
+Bibliotecas:
+MySQL Connector: mysql-connector-java (versión 8.0.33) para conectarse a bases de datos MySQL.
+Aplicaciones usadas:
+IntelliJ IDEA: IDE para el desarrollo del código.
+MySQL Workbench: Gestión y visualización de la base de datos.
+PlantUML: Creación de diagramas UML.
 📊 Diagrama de Clases UML
 A continuación se muestra un diagrama de clases básico para la aplicación:
 
@@ -86,19 +121,20 @@ class Book {
 
 Imprimir --> Book
 @enduml
+![uml-bookmanager.png](uml-bookmanager.png)
 📌 Repositorio de Código
 El código de esta aplicación está disponible en este repositorio de GitHub. Aquí puedes explorar los archivos fuente y ver cómo se implementa cada funcionalidad descrita.
 
 
-![uml-bookmanager.png](uml-bookmanager.png)
-![imagen de uso](Image20241104103403.png)
 
 ## 🤝 Colaboradores
 
 Agradecimientos especiales a los siguientes colaboradores por sus contribuciones al proyecto:
 
-- [LayGomez](https://github.com/LayGomez)
+
 - [Evymari](https://github.com/evymari)
+- [IvanLopez](https://github.com/IvanLopez-Source)
+- [LayGomez](https://github.com/LayGomez)
 
 ## 🔗 Recursos del Proyecto
 
@@ -108,4 +144,4 @@ Puedes acceder al tablero de Jira para ver el progreso del proyecto y el estado 
 
 ### 📝 Diagramas en Draw.io
 Para ver y editar los diagramas del proyecto, utiliza el siguiente enlace a Draw.io:
-- [Draw.io - Diagramas del Proyecto](AQUÍ_VA_EL_ENLACE_DE_DRAWIO)
+- [Draw.io - Diagramas del Proyecto](https://drive.google.com/file/d/1uBBDb_S9NP8q_nvbcwhBTsAeaM8q8FOD/view?usp=sharing )

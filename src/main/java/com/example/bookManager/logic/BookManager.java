@@ -15,11 +15,11 @@ public class BookManager {
     }
 
     public void createBook(String isbn, String titulo, String autor) {
-        Optional<Libro> optionalLibro = bookRepository.findByIsbn(isbn);
+        Optional<Book> optionalBook = bookRepository.findByIsbn(isbn);
 
 
-        if (optionalLibro.isPresent()) {
-            throw new IllegalArgumentException("Ya existe un libro con ese ISBN. No se puede añadir el libro.");
+        if (optionalBook.isPresent()) {
+            throw new IllegalArgumentException("Ya existe un Book con ese ISBN. No se puede añadir el Book.");
         }
 
 
@@ -33,8 +33,8 @@ public class BookManager {
 
         }
 
-        Libro libro = new Libro(isbn, titulo, autor);
-        bookRepository.save(libro);
+        Book Book = new Book(isbn, titulo, autor);
+        bookRepository.save(Book);
 
     }
 
@@ -42,7 +42,7 @@ public class BookManager {
         bookRepository.deleteByIsbn(isbn);
     }
 
-    public List<Libro> getAllBook() {
+    public List<Book> getAllBook() {
         return bookRepository.findAll();
     }
 

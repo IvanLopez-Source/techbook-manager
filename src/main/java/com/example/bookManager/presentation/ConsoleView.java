@@ -1,8 +1,9 @@
 package com.example.bookManager.presentation;
 
+import com.example.bookManager.logic.Book;
 import com.example.bookManager.logic.BookManager;
 import com.example.bookManager.logic.BookRepository;
-import com.example.bookManager.logic.Libro;
+
 import com.example.bookManager.persitence.InMemoryBookRepository;
 import com.example.bookManager.persitence.MySQLBookRepository;
 
@@ -133,8 +134,8 @@ public class ConsoleView {
     }
 
     private void printBookList() {
-        List<Libro> bookList = bookManager.getAllBook();
-        for (Libro book : bookList) {
+        List<Book> bookList = bookManager.getAllBook();
+        for (Book book : bookList) {
             System.out.println(book.toString());
         }
     }

@@ -1,8 +1,9 @@
 package com.example.bookManager.persitence;
 
+import com.example.bookManager.logic.Book;
 import com.example.bookManager.logic.BookRepository;
 import com.example.bookManager.config.MySqlConnection;
-import com.example.bookManager.logic.Libro;
+import com.example.bookManager.logic.Book;
 
 import java.sql.*;
 import java.util.ArrayList;
@@ -13,7 +14,7 @@ public class MySQLBookRepository implements BookRepository {
 
     // CRUD
     @Override
-    public void save(Libro book) {
+    public void save(Book book) {
         String sql = "INSERT INTO books (isbn, title, author) VALUES (?, ?, ?)";
 
 
@@ -30,9 +31,9 @@ public class MySQLBookRepository implements BookRepository {
     }
 
     @Override
-    public List<Libro> findAll() {
+    public List<Book> findAll() {
         String sql = "SELECT * FROM books";
-        List<Libro> booksList = new ArrayList<>();
+        List<Book> booksList = new ArrayList<>();
         try {
             Connection connection = MySqlConnection.getConnection();
             Statement statement = connection.createStatement();
@@ -44,7 +45,7 @@ public class MySQLBookRepository implements BookRepository {
                 String title = res.getString("title");
                 String author = res.getString("author");
 
-                Libro book = new Libro(isbn, title, author);
+                Book book = new Book(isbn, title, author);
                 booksList.add(book);
             }
 
@@ -69,7 +70,7 @@ public class MySQLBookRepository implements BookRepository {
     }
 
     @Override
-    public Optional<Libro> findByIsbn(String isbn) {
+    public Optional<Book> findByIsbn(String isbn) {
         String sql = "SELECT * FROM books WHERE isbn= '%s'".formatted(isbn);
         try {
             Connection connection = MySqlConnection.getConnection();
@@ -78,7 +79,7 @@ public class MySQLBookRepository implements BookRepository {
 
             // mirar si hay un resultado
             if (res.next()) {
-                Libro book = new Libro(res.getString("isbn"),
+                Book book = new Book(res.getString("isbn"),
                         res.getString("title"),
                         res.getString("author"));
                 return Optional.of(book);

@@ -5,11 +5,11 @@ import java.util.Optional;
 
 public interface BookRepository {
     // CRUD
-    void save(Libro book);
+    void save(Book book);
 
-    List<Libro> findAll();
+    List<Book> findAll();
 
     void deleteByIsbn(String isbn);
 
-    Optional<Libro> findByIsbn(String isbn);
+    Optional<Book> findByIsbn(String isbn);
 }

@@ -1,11 +1,11 @@
 package com.example.bookManager.logic;
 
-public class Libro {
+public class Book {
     private String isbn;
     private String title;
     private String author;
 
-    public Libro(String isbn, String titulo, String autor) {
+    public Book(String isbn, String titulo, String autor) {
         this.isbn = isbn;
         this.title = titulo;
         this.author = autor;
